@@ -1,11 +1,24 @@
-# 🧬 COVID-19 Genome Mutations (Mini Project)
+cat > projects/covid19_genome_mutations/README.md << 'EOF'
+# 🧬 Analyzing COVID-19 Genome Mutations
 
-**Goal:** Download a few SARS-CoV-2 complete genomes, run an MSA (Clustal/MAFFT web), note substitutions/indels, and summarise mutations.
+**Goal:** Compare a few SARS-CoV-2 complete genomes to identify mutations using free online tools (Clustal/MAFFT) and simple scripts.
 
 ## Steps
-1) Get 2–3 FASTA sequences (NCBI Virus / GISAID).
-2) Run multiple sequence alignment (Clustal Omega / MAFFT web).
-3) Save alignment to `results/alignment_result.aln` (or `.clustal`).
-4) Create `results/mutation_summary.csv` with columns:
-   `position,ref,alt,gene,note`
-5) Add a short interpretation here (e.g., Spike region hotspots).
+1) Download FASTA sequences (NCBI Virus / GISAID).
+2) Align with Clustal Omega or MAFFT (web).
+3) Inspect alignment for substitutions/indels and record positions.
+4) (Optional) Visualize mutation positions/frequency (Python/MEGA/UGENE).
+5) Interpret findings (e.g., Spike gene hotspots, known variants).
+
+## Folders
+- `data/` – input FASTA (example files only; avoid large data)
+- `scripts/` – parsing/plotting utilities
+- `results/` – alignment files, mutation tables, figures
+
+## Outputs
+- `results/alignment_result.*`
+- `results/mutation_summary.csv`
+
+EOF
+
+
