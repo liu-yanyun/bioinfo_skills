@@ -1,0 +1,32 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+.#*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env/
+venv/
+
+# R
+.Rhistory
+.Rproj.user/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Large data (keep only tiny examples in repo)
+data/
+datasets/
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.sam
+*.cram
+
+# Allow specific project data dirs (tiny examples only)
+!projects/**/data/

@@ -1,0 +1,15 @@
+# Minimal Snakemake example (text processing demo)
+configfile: "config.yaml"
+
+rule all:
+    input:
+        expand("results/{sample}.processed.txt", sample=config["samples"])
+
+rule process_text:
+    input:  "data/{sample}.txt"
+    output: "results/{sample}.processed.txt"
+    conda:  "envs/textproc.yml"
+    shell:
+        """
+        awk 'NF' {input} | tr '[:lower:]' '[:upper:]' > {output}
+        """

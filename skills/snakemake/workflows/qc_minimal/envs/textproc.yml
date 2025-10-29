@@ -1,0 +1,5 @@
+name: snk_textproc
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - awk
+  - coreutils

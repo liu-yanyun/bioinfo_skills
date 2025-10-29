@@ -1,0 +1,11 @@
+name: msa_ml_env
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - python=3.10
+  - biopython
+  - scikit-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - jupyterlab
+  - mafft
